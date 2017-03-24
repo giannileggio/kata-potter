@@ -1,4 +1,5 @@
 class PriceCalculator
+  DISCOUNTS = [0, 0, 0.05, 0.1]
 
   def initialize(books)
     @books = books
@@ -12,8 +13,7 @@ class PriceCalculator
   end
 
   def discount
-    return 0.05 if books.uniq.size == 2
-    0
+    DISCOUNTS[books.uniq.size]
   end
 
   private
