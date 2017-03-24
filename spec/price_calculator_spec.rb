@@ -19,6 +19,11 @@ RSpec.describe PriceCalculator do
       it { is_expected.to eq 15.2 }
     end
 
+    context 'when buying 3 different books' do
+      let(:books) { [0, 1, 2] }
+      it { is_expected.to eq 21.6 }
+    end
+
     context 'when parameters is not an array' do
       let(:books) { 'hello' }
       it 'throws an error' do
