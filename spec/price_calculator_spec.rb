@@ -30,5 +30,10 @@ RSpec.describe PriceCalculator do
       let(:books) { [3, 4] }
       it { is_expected.to eq 0.05 }
     end
+
+    context 'when buying 2 copies of same book' do
+      let(:books) { [3, 3] }
+      it { is_expected.to eq 0 }
+    end
   end
 end

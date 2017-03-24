@@ -11,7 +11,8 @@ class PriceCalculator
   end
 
   def discount
-    0.05
+    return 0.05 if books.uniq.size == 2
+    0
   end
 
   private
