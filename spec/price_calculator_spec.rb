@@ -19,7 +19,11 @@ RSpec.describe PriceCalculator do
       it { is_expected.to eq 15.2 }
     end
 
-    context 'when parameters is empty array' do
+    context 'when parameters is not an array' do
+      let(:books) { 'hello' }
+      it 'throws an error' do
+        expect{ subject }.to raise_error(ArgumentError)
+      end
     end
   end
 
