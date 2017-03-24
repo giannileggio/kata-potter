@@ -7,7 +7,9 @@ class PriceCalculator
 
   def total
     raise ArgumentError unless books.is_a? Array
-    (1 - discount) * books.size * 8
+    discounted_price = (1 - discount) * books.uniq.size * 8
+    whole_price = 8 * (books.size - books.uniq.size)
+    whole_price + discounted_price
   end
 
   def discount
