@@ -8,10 +8,10 @@ RSpec.describe PriceCalculator do
       end
     end
 
-    # context 'when buying 0 books' do
-    #   it 'returns 0' do
-
-    #   end
-    # end
+    context 'when buying 0 books' do
+      it 'returns 0' do
+        expect(PriceCalculator.new.total).to eq 0
+      end
+    end
   end
 end
