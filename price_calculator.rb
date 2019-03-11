@@ -14,6 +14,13 @@ class PriceCalculator
   attr_reader :books
 
   def discount
-    books.uniq.size > 1 ? 5.to_f : 0
+    case books.uniq.size
+    when 2
+      5
+    when 3
+      10
+    else
+      0
+    end.to_f
   end
 end
