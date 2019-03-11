@@ -1,10 +1,12 @@
 class PriceCalculator
+  PRICE = 8
+
   def initialize(books = [])
     @books = books
   end
 
   def total
-    8 * books.size
+    PRICE * books.size
   end
 
   private
