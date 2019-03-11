@@ -15,12 +15,9 @@ class PriceCalculator
 
   def discount
     case books.uniq.size
-    when 2
-      5
-    when 3
-      10
-    else
-      0
+    when 2 then 5
+    when 3 then 10
+    else 0
     end.to_f
   end
 end
