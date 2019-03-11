@@ -4,8 +4,7 @@ class PriceCalculator
   end
 
   def total
-    return 0 unless books.size.positive?
-    8
+    8 * books.size
   end
 
   private
